@@ -1,0 +1,92 @@
+.header
+  .header__topside.container-max
+    span #[b NYSE: BTI$36.680.51] (1.41%)
+  .header__content.container-max
+    button.header__burger
+      +svg('burger')
+    button.header__close
+      +svg('close')
+    a.header__logo(href="#")
+      +svg('logo')
+    .header__rightside
+      ul.header__nav
+        li.dropdown
+          a(href="#") About us
+          button.dropdown-button
+          .dropdown-content
+            .dropdown-content__container
+              img(src="/images/nav/1.jpg" alt="")
+              ul
+                li
+                  a(href="#") Leadership
+                li
+                  a(href="#") Ethics and Compliance
+                li
+                  a(href="#") Guiding Principles
+        li
+          a(href="#") Brands
+        li.dropdown
+          a(href="#") How we innovate
+          button.dropdown-button
+          .dropdown-content
+            .dropdown-content__container
+              img(src="/images/nav/2.jpg" alt="")
+              ul
+                li
+                  a(href="#") Transformation Journey
+                li
+                  a(href="#") Harm Reduction
+                li
+                  a(href="#") Consumers
+        li.dropdown
+          a(href="#") Our responsibility
+          button.dropdown-button
+          .dropdown-content
+            .dropdown-content__container
+              img(src="/images/nav/3.jpg" alt="")
+              ul
+                li
+                  a(href="#") Youth Prevention
+                li
+                  a(href="#") Community Engagement
+                li
+                  a(href="#") Sustainability
+                li
+                  a(href="#") Engagement and Advoc
+                li
+                  a(href="#") Responsible Marketing & Product Integrity
+                li
+                  a(href="#") Supplier Diversity
+        li.dropdown
+          a(href="#") Careers
+          button.dropdown-button
+          .dropdown-content
+            .dropdown-content__container
+              img(src="/images/nav/4.jpg" alt="")
+              ul
+                li
+                  a(href="#") Why the RAI Group?
+                li
+                  a(href="#") Areas of Opportunity
+                li
+                  a(href="#") Search and Apply
+        li.dropdown
+          a(href="#") Media
+          button.dropdown-button
+          .dropdown-content
+            .dropdown-content__container
+              img(src="/images/nav/5.jpg" alt="")
+              ul
+                li
+                  a(href="#") News & Features
+                li
+                  a(href="#") Press Releases
+                li
+                  a(href="#") Resources
+      button.header__search-button
+        +svg('search')
+    .header__search
+      form
+        input(type="text" placeholder="Search Keyword")
+        button(type="submit")
+          +svg('search')
