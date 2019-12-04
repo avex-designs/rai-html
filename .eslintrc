@@ -306,8 +306,8 @@
 		"id-length": "off",
 		"id-match": "off",
 		"indent": [
-			"error",
-			"tab",
+			2,
+			2,
 			{
 				"SwitchCase": 1
 			}

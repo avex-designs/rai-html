@@ -1,7 +1,7 @@
 .footer {
   h6 {
     margin: 0 0 33px;
-    color: $color-main;
+    color: $color-corporate-blue;
 
     @media (max-width: 991px) {
       margin-bottom: 0;
@@ -28,7 +28,7 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 16px;
-      color: $color-main;
+      color: $color-corporate-blue;
     }
 
     p {
@@ -37,7 +37,7 @@
     }
 
     a {
-      color: $color-main;
+      color: $color-corporate-blue;
     }
 
     @media (max-width: 991px) {
@@ -46,9 +46,9 @@
   }
 
   ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 
     li {
       margin-bottom: 10px;
@@ -87,8 +87,8 @@
     }
 
     img {
-      height: 16px;
       width: auto;
+      height: 16px;
     }
 
     @media (max-width: 767px) {
@@ -128,7 +128,7 @@
     justify-content: center;
     min-height: 56px;
     color: $color-white;
-    background-color: $color-main;
+    background-color: $color-corporate-blue;
 
     ul {
       display: flex;
@@ -213,15 +213,15 @@
     position: relative;
 
     .dropdown-button {
+      position: absolute;
+      right: 0;
+      top: 0;
       display: block;
+      border: none;
       padding: 0;
       width: 52px;
       height: 52px;
       background: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      border: none;
 
       &::before {
         content: "";
@@ -234,9 +234,9 @@
         height: 100%;
         background: url("../images/sprites/svg/plus.svg") no-repeat right center;
         background-size: 16px 16px;
+        transform: translateZ(0);
         transition: opacity 0.3s;
         will-change: opacity;
-        transform: translateZ(0);
       }
 
       &::after {
@@ -250,10 +250,10 @@
         height: 100%;
         background: url("../images/sprites/svg/minus.svg") no-repeat right center;
         background-size: 16px 16px;
+        opacity: 0;
+        transform: translateZ(0);
         transition: opacity 0.3s;
         will-change: opacity;
-        transform: translateZ(0);
-        opacity: 0;
       }
 
       @media (min-width: 768px) {
