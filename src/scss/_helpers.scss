@@ -10,8 +10,34 @@
   }
 }
 
-.for-mobile {
+.for-tablet-and-desktop {
+  @include mobile {
+    // stylelint-disable-next-line declaration-no-important
+    display: none !important;
+  }
+}
+
+.for-tablet {
   @include desktop {
+    // stylelint-disable-next-line declaration-no-important
+    display: none !important;
+  }
+}
+
+.for-tablet-only {
+  @include mobile {
+    // stylelint-disable-next-line declaration-no-important
+    display: none !important;
+  }
+
+  @include desktop {
+    // stylelint-disable-next-line declaration-no-important
+    display: none !important;
+  }
+}
+
+.for-mobile {
+  @include tablet-only {
     // stylelint-disable-next-line declaration-no-important
     display: none !important;
   }

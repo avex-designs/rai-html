@@ -1,10 +1,10 @@
 import './vendor';
 
-$('.dropdown-button').on('click', (e) => {
+$('.js-dropdown-button').on('click', (e) => {
   let $dropdown = $(e.currentTarget).parent();
 
   $dropdown.toggleClass('is-open');
-  $dropdown.find('.dropdown-content').slideToggle();
+  $dropdown.find('.js-dropdown-content').slideToggle();
 });
 
 $('.header__burger').on('click', () => {

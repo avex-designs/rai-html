@@ -1,0 +1,261 @@
+.call-out {
+  &__image {
+    position: relative;
+    height: 420px;
+    background-position: center;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      color: $color-white;
+      background-color: rgba($color-black, 0.5);
+    }
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      h1,
+      .h3-like {
+        position: relative;
+        color: $color-white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -35px;
+          margin-left: -30px;
+          width: 60px;
+          height: 1px;
+          background-color: $color-corporate-yellow;
+        }
+      }
+    }
+
+    @include tablet {
+      height: 280px;
+    }
+
+    @include mobile {
+      height: 180px;
+    }
+  }
+
+  &__list-container {
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__mobile-list {
+    position: relative;
+    display: block;
+    margin-top: 24px;
+    border: none;
+    padding: 0 16px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: left;
+    color: $color-corporate-blue;
+    background: $color-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      margin-top: -4px;
+      width: 16px;
+      height: 8px;
+      background: url("../images/sprites/svg/down.svg") no-repeat center;
+      background-size: cover;
+      transform: translateZ(0);
+      transition: transform 0.3s;
+      will-change: transform;
+    }
+
+    &.is-active {
+      &::before {
+        transform: translateZ(0) rotate(180deg);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 40px 0 0;
+
+    li {
+      margin: 0 40px;
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        color: rgba($color-corporate-blue, 0.5);
+        transition: color 0.3s;
+
+        @include desktop {
+          &:hover {
+            text-decoration: none;
+            color: $color-corporate-blue;
+          }
+        }
+
+        @include tablet {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: left;
+          color: $color-corporate-blue;
+          background: $color-white;
+        }
+      }
+
+      &.is-active {
+        a {
+          color: $color-corporate-blue;
+          pointer-events: none;
+        }
+      }
+
+      @include tablet {
+        margin: 0 0 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include tablet {
+      display: none;
+      padding: 16px 15px;
+    }
+  }
+
+  &__content {
+    padding: 80px 15px 120px;
+
+    @include tablet {
+      padding: 24px 15px 80px;
+    }
+  }
+
+  &--short {
+    .call-out__content {
+      display: flex;
+      justify-content: center;
+
+      h2,
+      .h3-like {
+        max-width: 830px;
+        text-align: center;
+        color: $color-corporate-blue;
+      }
+    }
+  }
+
+  &--long {
+    .call-out__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__text {
+        position: relative;
+        z-index: 2;
+        border-radius: 0 6px 6px 0;
+        padding: 40px 80px 40px 0;
+        width: calc(50% + 154px);
+        color: $color-corporate-blue;
+        background-color: $color-white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -3000px;
+          top: 0;
+          width: 3400px;
+          height: 1px;
+          background-color: $color-corporate-yellow;
+
+          @include tablet {
+            left: 0;
+            width: 55%;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 154px;
+          bottom: 0;
+          width: 400px;
+          height: 1px;
+          background-color: $color-corporate-yellow;
+
+          @include tablet {
+            right: 0;
+            width: 55%;
+          }
+        }
+
+        @include tablet {
+          order: 2;
+          padding: 40px;
+          width: 100%;
+        }
+
+        @include mobile {
+          padding: 40px 16px;
+        }
+      }
+
+      &__image {
+        position: relative;
+        z-index: 1;
+        margin-left: -154px;
+        width: 50%;
+        height: 654px;
+        background-position: center;
+        background-size: cover;
+
+        @include tablet {
+          order: 1;
+          margin: 0;
+          width: 100%;
+          height: 420px;
+        }
+
+        @include mobile {
+          height: 375px;
+        }
+      }
+
+      @include tablet {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
