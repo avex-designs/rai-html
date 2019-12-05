@@ -1,0 +1,105 @@
+.block-image-and-text {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .image-container {
+    img {
+      display: block;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 100%;
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include desktop {
+      padding-right: 40px;
+    }
+  }
+
+  .text-container {
+    .cta {
+      margin-top: 40px;
+    }
+  }
+
+  .h3-like {
+    margin-bottom: 16px;
+    color: $color-corporate-blue;
+  }
+
+  .ul-like {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    li {
+      @include tablet-and-desktop {
+        width: calc(50% - 30px);
+
+        &:nth-child(odd) {
+          margin-right: 30px;
+        }
+
+        &:nth-child(even) {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    @include mobile {
+      padding-left: 8px;
+    }
+  }
+
+  h6 {
+    margin-bottom: 9px;
+    color: $color-corporate-blue;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  .border-left {
+    margin-left: 40px;
+    max-width: 550px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+
+  .text-logo {
+    margin-top: 75px;
+    margin-left: 40px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+
+  @include tablet {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

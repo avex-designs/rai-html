@@ -30,6 +30,10 @@ input {
 .container-max {
   padding: 0 80px;
 
+  @include desktop-lg {
+    padding: 0 160px;
+  }
+
   @include tablet {
     padding: 0 40px;
   }
@@ -37,15 +41,19 @@ input {
   @include mobile {
     padding: 0 24px;
   }
-
-  @include desktop-lg {
-    padding: 0 160px;
-  }
 }
 
 .container-lg {
   margin: 0 auto;
   max-width: 1310px;
+
+  @include tablet {
+    padding: 0 40px;
+  }
+
+  @include mobile {
+    padding: 0 16px;
+  }
 }
 
 h1,
@@ -54,6 +62,16 @@ h1,
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
+
+.h1-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Arial" !important;
 }
 
 h2,
@@ -74,6 +92,11 @@ h2,
   }
 }
 
+.h2-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Georgia" !important;
+}
+
 h3,
 .h3-like {
   font-family: "Arial";
@@ -92,12 +115,22 @@ h3,
   }
 }
 
+.h3-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Arial" !important;
+}
+
 h4,
 .h4-like {
   font-family: "Arial";
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+}
+
+.h4-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Arial" !important;
 }
 
 h5,
@@ -108,6 +141,11 @@ h5,
   line-height: 21px;
 }
 
+.h5-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Arial" !important;
+}
+
 h6,
 .h6-like {
   font-family: "Georgia";
@@ -116,7 +154,282 @@ h6,
   line-height: 20px;
 }
 
+.h6-like {
+  // stylelint-disable-next-line declaration-no-important
+  font-family: "Georgia" !important;
+}
+
 p {
   font-size: 14px;
   line-height: 24px;
+
+  a {
+    color: $color-bright-blue;
+
+    &:hover {
+      color: $color-bright-blue;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.ul-like {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: $color-black;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-corporate-yellow;
+  border-radius: 24px;
+  padding: 0 24px;
+  min-width: 160px;
+  max-width: 343px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: $color-corporate-blue;
+  background-color: $color-corporate-yellow;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+
+  &:active {
+    border-color: $color-yellow-hover;
+    background-color: $color-yellow-hover;
+  }
+
+  &.small {
+    width: 160px;
+  }
+
+  &.medium {
+    width: 243px;
+  }
+
+  &.large {
+    max-width: 343px;
+  }
+
+  &.centered {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    &:hover {
+      border-color: rgba(23, 41, 98, 100);
+      text-decoration: none;
+      color: $color-corporate-blue;
+      background: none;
+    }
+
+    &:active {
+      border-color: $color-yellow-hover;
+      background-color: $color-yellow-hover;
+    }
+  }
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $color-corporate-yellow;
+  border-radius: 24px;
+  padding: 0 24px;
+  min-width: 160px;
+  max-width: 343px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 48px;
+  color: $color-corporate-blue;
+  background-color: $color-corporate-yellow;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+
+  svg {
+    margin-left: 20px;
+    width: 28px;
+    height: 13px;
+    fill: $color-corporate-blue;
+    transition: fill 0.3s;
+  }
+
+  &:active {
+    border-color: $color-yellow-hover;
+    background-color: $color-yellow-hover;
+  }
+
+  &.small {
+    width: 160px;
+  }
+
+  &.medium {
+    width: 243px;
+  }
+
+  &.large {
+    max-width: 343px;
+  }
+
+  &.centered {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    &:hover {
+      border-color: rgba(23, 41, 98, 100);
+      text-decoration: none;
+      color: $color-corporate-blue;
+      background: none;
+    }
+
+    &:active {
+      border-color: $color-yellow-hover;
+      background-color: $color-yellow-hover;
+    }
+  }
+}
+
+.border-left {
+  // stylelint-disable-next-line declaration-no-important
+  border-color: $color-corporate-yellow !important;
+  padding-left: 23px;
+
+  @include mobile {
+    padding-left: 8px;
+  }
+}
+
+.theme-light {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  .ul-like,
+  li,
+  div {
+    color: $color-white;
+  }
+
+  ul {
+    li {
+      &::before {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  @include desktop {
+    .button,
+    .secondary-button {
+      &:hover {
+        border-color: $color-white;
+        text-decoration: none;
+        color: $color-white;
+        background: none;
+
+        svg {
+          fill: $color-white;
+        }
+      }
+
+      &:active {
+        border-color: $color-yellow-hover;
+        color: $color-corporate-blue;
+        background-color: $color-yellow-hover;
+      }
+    }
+  }
+}
+
+.theme-dark-blue {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  .ul-like,
+  li,
+  div {
+    color: $color-corporate-blue;
+  }
+
+  ul {
+    li {
+      &::before {
+        background-color: $color-corporate-blue;
+      }
+    }
+  }
+}
+
+.theme-dark-blue-mobile {
+  @include mobile {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    .ul-like,
+    li,
+    div {
+      color: $color-corporate-blue;
+    }
+
+    ul {
+      li {
+        &::before {
+          background-color: $color-corporate-blue;
+        }
+      }
+    }
+  }
+}
+
+.text-left-mobile {
+  @include mobile {
+    // stylelint-disable-next-line declaration-no-important
+    text-align: left !important;
+  }
 }

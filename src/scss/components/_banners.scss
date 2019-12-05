@@ -1,0 +1,136 @@
+.banner {
+  background-position: center;
+  background-size: cover;
+
+  .content {
+    @include mobile {
+      padding-top: 62px;
+      padding-bottom: 62px;
+    }
+
+    @include tablet-and-desktop {
+      min-height: 520px;
+    }
+  }
+
+  &__headline {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 1px;
+      background-color: $color-corporate-yellow;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  &__image {
+    margin-right: -15px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+    height: 375px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta {
+    margin-top: 40px;
+  }
+
+  &--quote {
+    &__title {
+      position: relative;
+      margin-bottom: 52px;
+
+      &::before {
+        content: "“";
+        position: absolute;
+        left: 0;
+        top: -50px;
+        font-size: 80px;
+        line-height: 52px;
+        color: $color-corporate-yellow;
+
+        @include mobile {
+          top: -40px;
+          font-size: 40px;
+        }
+      }
+
+      &::after {
+        content: "”";
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        font-size: 80px;
+        line-height: 52px;
+        color: $color-corporate-yellow;
+
+        @include mobile {
+          bottom: -40px;
+          font-size: 40px;
+        }
+      }
+
+      @include mobile {
+        margin-top: 40px;
+      }
+    }
+
+    &__author {
+      position: relative;
+      padding-left: 72px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 60px;
+        height: 1px;
+        background-color: $color-corporate-yellow;
+      }
+    }
+
+    .content {
+      @include mobile {
+        padding-top: 100px;
+      }
+    }
+  }
+
+  &--small {
+    .cta {
+      margin-top: 30px;
+    }
+
+    .content {
+      min-height: 368px;
+    }
+  }
+
+  @include mobile {
+    &.banner-with-mobile-image {
+      // stylelint-disable-next-line declaration-no-important
+      background: none !important;
+
+      .content {
+        padding-top: 0;
+      }
+    }
+  }
+}

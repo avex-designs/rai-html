@@ -157,7 +157,7 @@
     padding: 80px 15px 120px;
 
     @include tablet {
-      padding: 24px 15px 80px;
+      padding: 24px 15px 64px;
     }
   }
 
@@ -218,6 +218,10 @@
             right: 0;
             width: 55%;
           }
+        }
+
+        h2 {
+          margin-bottom: 0;
         }
 
         @include tablet {

@@ -1,0 +1,32 @@
+.block-bullet-point-section {
+  padding: 80px 0;
+
+  h1 {
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 56px;
+    }
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  ul {
+    li {
+      font-family: "Georgia";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  .cta {
+    margin-top: 50px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+}
