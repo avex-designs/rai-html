@@ -1,4 +1,6 @@
 .footer {
+  padding-top: $tablet-block-offset;
+
   h6 {
     margin: 0 0 33px;
     color: $color-corporate-blue;
@@ -41,7 +43,7 @@
     }
 
     @include tablet {
-      padding-bottom: 24px;
+      padding-bottom: $mobile-xs-block-offset;
     }
   }
 
@@ -186,7 +188,7 @@
 
     @include tablet {
       justify-content: space-between;
-      padding: 0 24px;
+      padding: 0 $mobile-xs-block-offset;
     }
 
     @include mobile {
@@ -283,10 +285,7 @@
     }
   }
 
-  @include desktop {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  @include mobile {
+    padding-top: $mobile-block-offset;
   }
 }

@@ -1,5 +1,5 @@
 .block-bullet-point-section {
-  padding: 80px 0;
+  padding: $desktop-block-offset 0;
 
   h1 {
     margin-bottom: 80px;
@@ -9,13 +9,13 @@
     }
 
     @include mobile {
-      margin-bottom: 40px;
+      margin-bottom: $mobile-block-offset;
     }
   }
 
   ul {
     li {
-      font-family: "Georgia";
+      font-family: $font-secondary;
       font-weight: 400;
       font-size: 18px;
       line-height: 20px;
@@ -26,7 +26,7 @@
     margin-top: 50px;
 
     @include tablet {
-      margin-top: 40px;
+      margin-top: $mobile-block-offset;
     }
   }
 }

@@ -1,6 +1,6 @@
 .block-image-and-text {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: $desktop-block-offset;
+  padding-bottom: $desktop-block-offset;
 
   .image-container {
     img {
@@ -10,11 +10,11 @@
       max-width: 100%;
 
       @include tablet {
-        margin-bottom: 40px;
+        margin-bottom: $mobile-block-offset;
       }
 
       @include mobile {
-        margin-bottom: 24px;
+        margin-bottom: $mobile-xs-block-offset;
       }
     }
 
@@ -25,7 +25,7 @@
 
   .text-container {
     .cta {
-      margin-top: 40px;
+      margin-top: $mobile-block-offset;
     }
   }
 
@@ -37,7 +37,7 @@
   .ul-like {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: $mobile-block-offset;
 
     li {
       @include tablet-and-desktop {
@@ -85,7 +85,7 @@
     margin-left: 40px;
 
     @include tablet {
-      margin-top: 40px;
+      margin-top: $mobile-block-offset;
     }
 
     @include mobile {
@@ -94,12 +94,12 @@
   }
 
   @include tablet {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: $tablet-block-offset;
+    padding-bottom: $tablet-block-offset;
   }
 
   @include mobile {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: $mobile-block-offset;
+    padding-bottom: $mobile-block-offset;
   }
 }

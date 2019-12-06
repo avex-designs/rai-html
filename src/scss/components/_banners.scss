@@ -48,7 +48,7 @@
   }
 
   .cta {
-    margin-top: 40px;
+    margin-top: $mobile-block-offset;
   }
 
   &--quote {
@@ -87,7 +87,7 @@
       }
 
       @include mobile {
-        margin-top: 40px;
+        margin-top: $mobile-block-offset;
       }
     }
 

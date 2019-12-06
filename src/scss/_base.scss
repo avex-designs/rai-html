@@ -6,7 +6,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Arial";
+  font-family: $font-primary;
 }
 
 button,
@@ -21,10 +21,6 @@ input {
 .site-container {
   position: relative;
   min-height: 100vh;
-
-  @include desktop {
-    padding-bottom: 400px;
-  }
 }
 
 .container-max {
@@ -58,7 +54,7 @@ input {
 
 h1,
 .h1-like {
-  font-family: "Arial";
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -71,12 +67,12 @@ h1,
 
 .h1-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Arial" !important;
+  font-family: $font-primary !important;
 }
 
 h2,
 .h2-like {
-  font-family: "Georgia";
+  font-family: $font-secondary;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
@@ -94,12 +90,12 @@ h2,
 
 .h2-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Georgia" !important;
+  font-family: $font-secondary !important;
 }
 
 h3,
 .h3-like {
-  font-family: "Arial";
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 32px;
   line-height: 52px;
@@ -117,12 +113,12 @@ h3,
 
 .h3-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Arial" !important;
+  font-family: $font-primary !important;
 }
 
 h4,
 .h4-like {
-  font-family: "Arial";
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -130,12 +126,12 @@ h4,
 
 .h4-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Arial" !important;
+  font-family: $font-primary !important;
 }
 
 h5,
 .h5-like {
-  font-family: "Arial";
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -143,12 +139,12 @@ h5,
 
 .h5-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Arial" !important;
+  font-family: $font-primary !important;
 }
 
 h6,
 .h6-like {
-  font-family: "Georgia";
+  font-family: $font-secondary;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
@@ -156,7 +152,7 @@ h6,
 
 .h6-like {
   // stylelint-disable-next-line declaration-no-important
-  font-family: "Georgia" !important;
+  font-family: $font-secondary !important;
 }
 
 p {
