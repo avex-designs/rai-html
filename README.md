@@ -1,16 +1,16 @@
 # Documentation
 
+## Start working
+
+* `npm i`
+* `gulp`
+
 ## Minimum requirements
 
 * node >= 9.5.0
 * npm >= 5.6.0
 * gulp >= 4.0.0
 * gulp-cli >= 2.0.1
-
-## Start working
-
-* `npm i`
-* `gulp`
 
 ## Gulp tasks
 
