@@ -26,3 +26,22 @@ $('.js-open-popup').on('click', (e) => {
 $('.js-close-popup').on('click', (e) => {
   $(e.currentTarget).closest('.popup').fadeOut();
 });
+
+$('.article-list__tabs-buttons button').on('click', (e) => {
+  let $this = $(e.currentTarget);
+  let tabName = $this.data('tab');
+  let $activeTab = $this.closest('.article-list__tabs').find('.article-list__tab.is-active');
+  let $nextTab = $this.closest('.article-list__tabs').find(`.article-list__tab[data-tab="${tabName}"]`);
+  let $activeButton = $this.parent().find('button.is-active');
+
+  $activeTab.fadeOut(() => {
+    $activeTab.removeClass('is-active');
+    $nextTab.fadeIn(() => {
+      $nextTab.addClass('is-active');
+    });
+
+    $this.addClass('is-active');
+  });
+
+  $activeButton.removeClass('is-active');
+});

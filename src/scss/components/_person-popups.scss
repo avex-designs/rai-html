@@ -23,7 +23,7 @@
     top: 50%;
     z-index: 2;
     overflow-y: auto;
-    border-radius: 6px;
+    border-radius: $primary-border-radius;
     padding: 80px;
     max-height: calc(100vh - 100px);
     box-shadow: 0 2px 15px rgba($color-black, 0.25);
@@ -101,7 +101,7 @@
     img {
       display: block;
       margin-bottom: 30px;
-      border-radius: 6px;
+      border-radius: $primary-border-radius;
       width: 230px;
       height: auto;
 

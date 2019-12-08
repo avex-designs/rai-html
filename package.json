@@ -1,7 +1,7 @@
 {
-	"name": "ninelines-template",
+	"name": "rai-template",
 	"version": "2.7.2",
-	"description": "Шаблон для разработки сайтов",
+	"description": "template for rai",
 	"scripts": {},
 	"author": "Dmitry Artemov <d.artemov@9-lines.com>",
 	"license": "ISC",

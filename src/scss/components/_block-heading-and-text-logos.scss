@@ -1,4 +1,4 @@
-// styles from ./components/block-image-and-text"
+// styles from ./components/block-image-and-text
 
 .block-heading-and-text-logos {
   .image-container {
@@ -6,7 +6,7 @@
 
     img {
       display: block;
-      border-radius: 6px;
+      border-radius: $primary-border-radius;
       width: auto;
       max-width: 100%;
 
