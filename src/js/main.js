@@ -18,3 +18,11 @@ $('.header__close').on('click', () => {
 $('.header__search-button').on('click', () => {
   $('.header__search').toggleClass('is-active');
 });
+
+$('.js-open-popup').on('click', (e) => {
+  $(document).find(`.popup[data-popup="${$(e.currentTarget).data('popup')}"]`).fadeIn();
+});
+
+$('.js-close-popup').on('click', (e) => {
+  $(e.currentTarget).closest('.popup').fadeOut();
+});

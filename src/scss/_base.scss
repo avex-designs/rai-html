@@ -52,6 +52,11 @@ input {
   }
 }
 
+.container-sm {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 h1,
 .h1-like {
   font-family: $font-primary;
@@ -135,6 +140,11 @@ h5,
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .h5-like {
@@ -216,9 +226,8 @@ img {
   background-color: $color-corporate-yellow;
   transition: color 0.3s, background 0.3s, border-color 0.3s;
 
-  &:active {
-    border-color: $color-yellow-hover;
-    background-color: $color-yellow-hover;
+  &:hover {
+    text-decoration: none;
   }
 
   &.small {
@@ -277,9 +286,8 @@ img {
     transition: fill 0.3s;
   }
 
-  &:active {
-    border-color: $color-yellow-hover;
-    background-color: $color-yellow-hover;
+  &:hover {
+    text-decoration: none;
   }
 
   &.small {

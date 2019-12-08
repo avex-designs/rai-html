@@ -1,0 +1,163 @@
+.person-popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+  display: none;
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba($color-black, 0.25);
+  }
+
+  &__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    overflow-y: auto;
+    border-radius: 6px;
+    padding: 80px;
+    max-height: calc(100vh - 100px);
+    box-shadow: 0 2px 15px rgba($color-black, 0.25);
+    background-color: $color-white;
+    transform: translate(-50%, -50%);
+
+    @include tablet {
+      padding: 32px $mobile-block-offset;
+      max-width: calc(100vw - 80px);
+    }
+
+    @include mobile {
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      transform: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    z-index: 2;
+    border: none;
+    padding: 10px;
+    width: 36px;
+    height: 36px;
+    background: none;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+      transition: transform 0.3s;
+      will-change: transform;
+    }
+
+    @include desktop {
+      &:hover {
+        svg {
+          transform: rotate(90deg) translateZ(0);
+        }
+      }
+    }
+
+    @include mobile {
+      right: 6px;
+      top: 6px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: rgba($color-black, 0.5);
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__main-info {
+    width: 230px;
+
+    img {
+      display: block;
+      margin-bottom: 30px;
+      border-radius: 6px;
+      width: 230px;
+      height: auto;
+
+      @include tablet {
+        margin: 0;
+      }
+
+      @include mobile {
+        width: 128px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      color: $color-corporate-blue;
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__text {
+      @include tablet {
+        width: calc(100% - 264px);
+      }
+
+      @include mobile {
+        width: calc(100% - 143px);
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $mobile-block-offset;
+      width: 100%;
+    }
+
+    @include mobile {
+      align-items: flex-end;
+      margin-bottom: 24px;
+
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__textblock {
+    width: calc(100% - 294px);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
