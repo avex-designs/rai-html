@@ -7,6 +7,11 @@
 * gulp >= 4.0.0
 * gulp-cli >= 2.0.1
 
+## Start working
+
+* `npm i`
+* `gulp`
+
 ## Gulp tasks
 
 * `default` - the main task, runs `build`, `watch` and `serve`.
