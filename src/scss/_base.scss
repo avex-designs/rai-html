@@ -235,6 +235,7 @@ img {
     font-size: 14px;
     line-height: 16px;
     color: $color-corporate-blue;
+    transition: color 0.3s;
   }
 
   svg {
@@ -242,7 +243,7 @@ img {
     height: 13px;
     fill: $color-corporate-blue;
     transform: translateZ(0);
-    transition: transform 0.3s;
+    transition: transform 0.3s, fill 0.3s;
     will-change: transform;
   }
 
@@ -250,7 +251,12 @@ img {
     &:hover {
       text-decoration: none;
 
+      span {
+        color: $color-bright-blue;
+      }
+
       svg {
+        fill: $color-bright-blue;
         transform: translateZ(0) translateX(8px);
       }
     }
