@@ -169,6 +169,49 @@
     }
   }
 
+  &--full {
+    .article-list__item {
+      a {
+        @include mobile {
+          padding-right: 0;
+          padding-left: 0;
+
+          &::before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &:first-child {
+        a {
+          &::before {
+            display: block;
+          }
+        }
+      }
+
+      &:last-child {
+        a {
+          &::after {
+            content: "";
+            position: absolute;
+            left: 32px;
+            right: 32px;
+            bottom: 0;
+            height: 1px;
+            background-color: #e9ecee;
+
+            @include mobile {
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @include tablet {
     padding-top: $tablet-block-offset;
     padding-bottom: $tablet-block-offset;

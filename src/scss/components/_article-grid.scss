@@ -37,35 +37,9 @@
       }
     }
 
-    &__link {
-      display: flex;
-      align-items: center;
-
+    .link-arrow {
       span {
-        margin-right: 16px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
         color: $color-corporate-blue;
-      }
-
-      svg {
-        width: 28px;
-        height: 13px;
-        fill: $color-corporate-blue;
-        transform: translateZ(0);
-        transition: transform 0.3s;
-        will-change: transform;
-      }
-
-      @include desktop {
-        &:hover {
-          text-decoration: none;
-
-          svg {
-            transform: translateZ(0) translateX(8px);
-          }
-        }
       }
     }
 

@@ -57,6 +57,12 @@ input {
   max-width: 1000px;
 }
 
+.container-xs {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 814px;
+}
+
 h1,
 .h1-like {
   font-family: $font-primary;
@@ -127,6 +133,11 @@ h4,
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .h4-like {
@@ -210,6 +221,38 @@ img {
       width: 4px;
       height: 4px;
       background-color: $color-black;
+    }
+  }
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-corporate-blue;
+  }
+
+  svg {
+    width: 28px;
+    height: 13px;
+    fill: $color-corporate-blue;
+    transform: translateZ(0);
+    transition: transform 0.3s;
+    will-change: transform;
+  }
+
+  @include desktop {
+    &:hover {
+      text-decoration: none;
+
+      svg {
+        transform: translateZ(0) translateX(8px);
+      }
     }
   }
 }
@@ -440,5 +483,34 @@ img {
   @include mobile {
     // stylelint-disable-next-line declaration-no-important
     text-align: left !important;
+  }
+}
+
+.js-slider {
+  padding: 0 40px;
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    border: none;
+    width: 29px;
+    height: 36px;
+    font-size: 0;
+    background: url("../images/sprites/svg/prev.svg") no-repeat center;
+    background-size: 9px 16px;
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+      background-image: url("../images/sprites/svg/next.svg");
+    }
+  }
+
+  @include mobile {
+    padding: 0 30px;
   }
 }
