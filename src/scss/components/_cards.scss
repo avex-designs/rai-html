@@ -1,7 +1,4 @@
 .cards {
-  padding-top: $desktop-block-offset;
-  padding-bottom: $desktop-block-offset;
-
   .col-md-4 {
     @include tablet {
       padding: 0 4px;
@@ -263,15 +260,7 @@
     }
   }
 
-  @include tablet {
-    padding-top: $tablet-block-offset;
-    padding-bottom: $tablet-block-offset;
-  }
-
   @include mobile {
-    padding-top: $mobile-block-offset;
-    padding-bottom: $mobile-block-offset;
-
     &--persons {
       padding-right: 10px;
       padding-left: 10px;

@@ -1,7 +1,4 @@
 .article-list {
-  padding-top: $desktop-block-offset;
-  padding-bottom: $desktop-block-offset;
-
   &__tabs-buttons {
     position: relative;
     z-index: 2;
@@ -210,40 +207,5 @@
         }
       }
     }
-  }
-
-  @include tablet {
-    padding-top: $tablet-block-offset;
-    padding-bottom: $tablet-block-offset;
-
-    > .container-lg {
-      > .row {
-        > .col-12.col-lg-6 {
-          &:last-child {
-            .article-list__container {
-              // stylelint-disable-next-line declaration-no-important
-              border-bottom: 1px solid #e9ecee !important;
-            }
-          }
-
-          &:nth-child(odd) {
-            .article-list__container {
-              border-bottom: none;
-            }
-          }
-
-          &:nth-child(even) {
-            .article-list__container {
-              border-top: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @include mobile {
-    padding-top: $mobile-block-offset;
-    padding-bottom: $mobile-block-offset;
   }
 }

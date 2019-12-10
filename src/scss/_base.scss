@@ -522,3 +522,18 @@ img {
     padding: 0 30px;
   }
 }
+
+.block-offset-top-and-bottom {
+  padding-top: $desktop-block-offset;
+  padding-bottom: $desktop-block-offset;
+
+  @include tablet {
+    padding-top: $tablet-block-offset;
+    padding-bottom: $tablet-block-offset;
+  }
+
+  @include mobile {
+    padding-top: $mobile-block-offset;
+    padding-bottom: $mobile-block-offset;
+  }
+}

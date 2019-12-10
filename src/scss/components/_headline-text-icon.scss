@@ -1,7 +1,4 @@
 .headline-text-icon {
-  padding-top: $desktop-block-offset;
-  padding-bottom: $desktop-block-offset;
-
   h1 {
     margin-bottom: $mobile-block-offset;
     color: $color-corporate-blue;
@@ -45,15 +42,5 @@
         height: 172px;
       }
     }
-  }
-
-  @include tablet {
-    padding-top: $tablet-block-offset;
-    padding-bottom: $tablet-block-offset;
-  }
-
-  @include mobile {
-    padding-top: $mobile-block-offset;
-    padding-bottom: $mobile-block-offset;
   }
 }

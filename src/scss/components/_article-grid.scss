@@ -1,7 +1,4 @@
 .article-grid {
-  padding-top: $desktop-block-offset;
-  padding-bottom: $desktop-block-offset;
-
   &__item {
     overflow: hidden;
     border-radius: $primary-border-radius;
@@ -59,15 +56,5 @@
     @include mobile {
       margin-bottom: 16px;
     }
-  }
-
-  @include tablet {
-    padding-top: $tablet-block-offset;
-    padding-bottom: $tablet-block-offset;
-  }
-
-  @include mobile {
-    padding-top: $mobile-block-offset;
-    padding-bottom: $mobile-block-offset;
   }
 }
