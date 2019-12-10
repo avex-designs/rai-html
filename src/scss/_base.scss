@@ -486,12 +486,14 @@ img {
   }
 }
 
-.js-slider {
+.js-slider,
+.js-slider-mobile {
   padding: 0 40px;
 
   .slick-arrow {
     position: absolute;
     top: 50%;
+    z-index: 2;
     margin-top: -18px;
     border: none;
     width: 29px;
