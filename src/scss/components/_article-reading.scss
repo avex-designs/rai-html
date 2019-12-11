@@ -16,8 +16,8 @@
   }
 
   &__articles {
-    border-top: 1px solid #e1effc;
-    border-bottom: 1px solid #e1effc;
+    border-top: 1px solid $color-light-blue;
+    border-bottom: 1px solid $color-light-blue;
     height: calc(100% - 30px);
 
     @include tablet {
@@ -63,7 +63,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    border: 1px solid #e1effc;
+    border: 1px solid $color-light-blue;
     border-top: none;
     padding: 34px $mobile-xs-block-offset;
     min-height: 131px;
@@ -168,12 +168,12 @@
     @include tablet {
       display: block;
       border: none;
-      border-bottom: 1px solid #e1effc;
+      border-bottom: 1px solid $color-light-blue;
       padding: 0;
       min-height: 85px;
 
       &:first-child {
-        border-top: 1px solid #e1effc;
+        border-top: 1px solid $color-light-blue;
       }
     }
   }

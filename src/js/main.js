@@ -149,3 +149,20 @@ $('.article-reading__item').on('click', (e) => {
     });
   }
 });
+
+$('.js-timeline-year').on('click', (e) => {
+  let $this = $(e.currentTarget);
+  let data = $this.data('year');
+  let $parent = $this.closest('.timeline');
+  let $currentContent = $parent.find(`.js-timeline-content[data-year="${data}"]`);
+  let $pastContent = $parent.find('.js-timeline-content.is-active');
+
+  $('.js-timeline-year').removeClass('is-active');
+  $this.addClass('is-active');
+  $pastContent.fadeOut(() => {
+    $pastContent.removeClass('is-active');
+    $currentContent.fadeIn(() => {
+      $currentContent.addClass('is-active');
+    });
+  });
+});

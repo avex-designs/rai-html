@@ -108,10 +108,10 @@
     }
 
     @include tablet {
-      border-top: 1px solid #e1effc;
+      border-top: 1px solid $color-light-blue;
 
       &:last-child {
-        border-bottom: 1px solid #e1effc;
+        border-bottom: 1px solid $color-light-blue;
       }
     }
   }
