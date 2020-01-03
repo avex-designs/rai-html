@@ -2,19 +2,39 @@ article.headline-text-icon.block-offset-top-and-bottom
   .container-lg
     h1.h2-like.text-center A great company made even better by great people.
     p.text-center We succeed when our people do. Our benefits support your professional and personal life. That, coupled with our dynamic people have earned us recognition for being a unique and outstanding place to work.
-    ul.js-slider-mobile(
-      data-slides-mobile="1"
-      data-infinite="true"
-      data-arrows="true"
-      data-dots="false"
-      data-speed="500"
-      data-autoplay="false")
+    .awwards
+      .awwards__items.js-slider-mobile(
+        data-slides-mobile="1"
+        data-infinite="true"
+        data-arrows="true"
+        data-dots="false"
+        data-speed="500"
+        data-autoplay="false")
+        .awwards__item(
+          data-text="For two consecutive years, FORTUNE magazine recognized us as one of the Best Workplaces for Manufacturing & Production for investing in our businesses and people to drive innovation and inspire leadership."
+          data-link="#"
+        )
+          .awwards__item__image
+            img(src="/images/headline-text-icon-1.png" alt="")
+        .awwards__item(
+          data-text="For three years in a row, Reynolds American Inc. has been certified as a Great Place to Work for the many ways we are committed to creating an exceptional workplace for our employees."
+          data-link="#"
+        )
+          .awwards__item__image
+            img(src="/images/headline-text-icon-2.png" alt="")
+        .awwards__item(
+          data-text="#1 Best Retail & Consumer Products Internships"
+          data-link="#"
+        )
+          .awwards__item__image
+            img(src="/images/headline-text-icon-3.png" alt="")
+        .awwards__item(
+          data-text="We’re proud to be 1 of 26 Best in Class employers recognized among thousands of companies for our exceptional approach to plan design, management and participant outcomes."
+          data-link="#"
+        )
+          .awwards__item__image
+            img(src="/images/headline-text-icon-4.png" alt="")
 
-      li
-        img(src="/images/headline-text-icon-1.png" alt="")
-      li
-        img(src="/images/headline-text-icon-2.png" alt="")
-      li
-        img(src="/images/headline-text-icon-3.png" alt="")
-      li
-        img(src="/images/headline-text-icon-4.png" alt="")
+      .awwards__textblock
+        p.h6-like For three years in a row, Reynolds American Inc. has been certified as a Great Place to Work for the many ways we are committed to creating an exceptional workplace for our employees.
+        a(href="#") Learn More

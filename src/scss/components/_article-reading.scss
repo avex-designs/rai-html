@@ -42,6 +42,38 @@
       height: calc(100% - 30px);
       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
       background-color: $color-white;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        font-size: 14px;
+        line-height: 24px;
+
+        li {
+          position: relative;
+          margin-bottom: 1rem;
+          padding-left: 1rem;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            border-radius: 50%;
+            width: 2px;
+            height: 2px;
+            background-color: $color-black;
+          }
+        }
+
+        a {
+          color: $color-bright-blue;
+
+          &:hover {
+            color: $color-bright-blue;
+          }
+        }
+      }
     }
 
     @include tablet {

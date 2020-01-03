@@ -38,6 +38,14 @@
       span {
         color: $color-corporate-blue;
       }
+
+      @include desktop {
+        &:hover {
+          span {
+            color: $color-bright-blue;
+          }
+        }
+      }
     }
 
     &__date {

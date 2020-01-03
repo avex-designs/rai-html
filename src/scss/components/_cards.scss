@@ -196,8 +196,10 @@
     }
 
     &--person {
+      position: relative;
       padding: 60px $mobile-xs-block-offset;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14505);
+      transition: box-shadow 0.3s;
       cursor: pointer;
 
       figure {
@@ -234,6 +236,12 @@
         margin-top: 16px;
         margin-bottom: 0;
         color: rgba($color-black, 0.5);
+      }
+
+      @include desktop {
+        &:hover {
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.164);
+        }
       }
 
       @include tablet {

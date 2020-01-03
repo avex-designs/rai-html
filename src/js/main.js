@@ -166,3 +166,35 @@ $('.js-timeline-year').on('click', (e) => {
     });
   });
 });
+
+$('.awwards__item').on('mouseover', (e) => {
+  if (innerWidth > 767) {
+    let $this = $(e.currentTarget);
+
+    $('.awwards__item').not($this).addClass('not-active');
+    $('.awwards__textblock p').text($this.data('text'));
+    $('.awwards__textblock a').attr('href', $this.data('link'));
+
+    setTimeout(() => {
+      $this.addClass('is-active');
+
+      setTimeout(() => {
+        $('.awwards__textblock').addClass('is-active');
+      }, 100);
+    }, 300);
+  }
+});
+
+$('.awwards').on('mouseleave', () => {
+  if (innerWidth > 767) {
+    $('.awwards__textblock').removeClass('is-active');
+
+    setTimeout(() => {
+      $('.awwards__item').removeClass('is-active');
+
+      setTimeout(() => {
+        $('.awwards__item').removeClass('not-active');
+      }, 100);
+    }, 300);
+  }
+});

@@ -275,7 +275,6 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 48px;
-  text-transform: uppercase;
   color: $color-corporate-blue;
   background-color: $color-corporate-yellow;
   transition: color 0.3s, background 0.3s, border-color 0.3s;
@@ -294,6 +293,11 @@ img {
 
   &.large {
     max-width: 343px;
+  }
+
+  &.uppercase {
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   &.centered {
@@ -328,6 +332,7 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 48px;
+  white-space: nowrap;
   color: $color-corporate-blue;
   background-color: $color-corporate-yellow;
   transition: color 0.3s, background 0.3s, border-color 0.3s;
