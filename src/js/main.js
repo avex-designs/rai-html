@@ -198,3 +198,9 @@ $('.awwards').on('mouseleave', () => {
     }, 300);
   }
 });
+
+$('.to-top').on('click', () => {
+  $(document.documentElement).add(document.body).animate({
+    scrollTop: 0,
+  }, 400);
+});

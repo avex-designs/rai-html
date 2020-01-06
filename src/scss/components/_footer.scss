@@ -1,7 +1,4 @@
 .footer {
-  border-top: 1px solid #e9ecee;
-  padding-top: $tablet-block-offset;
-
   h6 {
     margin: 0 0 33px;
     color: $color-corporate-blue;
@@ -284,6 +281,11 @@
         }
       }
     }
+  }
+
+  @include desktop {
+    border-top: 1px solid #e9ecee;
+    padding-top: $tablet-block-offset;
   }
 
   @include mobile {

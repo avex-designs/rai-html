@@ -45,10 +45,27 @@
     height: 375px;
     background-position: center;
     background-size: cover;
+
+    @include mobile {
+      margin-bottom: $mobile-xs-block-offset;
+      height: 280px;
+    }
   }
 
   .cta {
     margin-top: $mobile-block-offset;
+  }
+
+  &.banner-hairline-headline-cta {
+    @include tablet-only {
+      .content {
+        padding: $mobile-block-offset 0;
+
+        .banner__headline {
+          margin-top: $mobile-block-offset;
+        }
+      }
+    }
   }
 
   &--quote {
