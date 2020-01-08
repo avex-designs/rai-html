@@ -12,6 +12,7 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/to-top";
+@import "./components/back";
 
 @import "./components/call-out";
 @import "./components/block-image-and-text";
@@ -25,6 +26,7 @@
 @import "./components/banners";
 @import "./components/banner-hairline-headline-cta";
 @import "./components/banner-quote";
+@import "./components/banner-hero";
 @import "./components/banner-text";
 @import "./components/banner-centered-cta";
 @import "./components/cards";
@@ -41,3 +43,9 @@
 @import "./components/information-dropdown";
 @import "./components/article-reading";
 @import "./components/timeline";
+@import "./components/message";
+@import "./components/goal";
+
+@import "./pages/sitemap";
+@import "./pages/article";
+@import "./pages/stories";

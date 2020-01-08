@@ -65,4 +65,16 @@
       margin-bottom: 16px;
     }
   }
+
+  .col-12.col-md-6 {
+    @include desktop {
+      margin-top: $mobile-block-offset;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+    }
+  }
 }

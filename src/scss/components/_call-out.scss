@@ -150,6 +150,7 @@
     @include tablet {
       display: none;
       padding: 16px 15px;
+      box-shadow: 0 2px 12px rgba($color-black, 0.1);
     }
   }
 

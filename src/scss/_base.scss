@@ -24,7 +24,7 @@ input {
 }
 
 .container-max {
-  padding: 0 80px;
+  padding: 0 $desktop-block-offset;
 
   @include desktop-lg {
     padding: 0 160px;
@@ -353,6 +353,85 @@ img {
   }
 }
 
+.selectric {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  background-color: $color-white;
+
+  .button {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 0;
+    background-color: $color-white;
+
+    &::after {
+      left: 50%;
+      top: 50%;
+      margin-top: -1px;
+      margin-left: -4px;
+      border: none;
+      width: 8px;
+      height: 5px;
+      background: url("../images/sprites/svg/down-arrow.svg") no-repeat center;
+      background-size: cover;
+      transition: transform 0.3s;
+
+      .selectric-open & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .label {
+    margin-right: 80px;
+    margin-left: 16px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+}
+
+.selectric-wrapper {
+  min-width: 215px;
+}
+
+.selectric-items {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  background-color: $color-white;
+
+  ul {
+    font-size: 0;
+
+    li {
+      border: none;
+      padding: 0 16px;
+      font-size: 14px;
+      line-height: 24px;
+      background-color: $color-white;
+      transition: background 0.3s, color 0.3s;
+
+      &.highlighted {
+        color: $color-white;
+        background-color: $color-corporate-blue;
+      }
+
+      @include desktop {
+        &:hover {
+          color: $color-white;
+          background-color: $color-corporate-blue;
+        }
+      }
+    }
+  }
+}
+
 .secondary-button {
   display: flex;
   align-items: center;
@@ -572,6 +651,30 @@ img {
 
   @include mobile {
     padding-top: $mobile-block-offset;
+    padding-bottom: $mobile-block-offset;
+  }
+}
+
+.block-offset-top {
+  padding-top: $desktop-block-offset;
+
+  @include tablet {
+    padding-top: $tablet-block-offset;
+  }
+
+  @include mobile {
+    padding-top: $mobile-block-offset;
+  }
+}
+
+.block-offset-bottom {
+  padding-bottom: $desktop-block-offset;
+
+  @include tablet {
+    padding-bottom: $tablet-block-offset;
+  }
+
+  @include mobile {
     padding-bottom: $mobile-block-offset;
   }
 }

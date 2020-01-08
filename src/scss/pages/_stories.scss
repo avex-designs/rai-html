@@ -1,0 +1,158 @@
+.stories {
+  &__title {
+    @include tablet {
+      margin-top: $mobile-xs-block-offset;
+    }
+  }
+
+  &__buttons-container {
+    @include tablet {
+      margin-bottom: $mobile-block-offset;
+    }
+  }
+
+  &__button-mobile {
+    position: relative;
+    display: block;
+    margin-top: 24px;
+    border: none;
+    padding: 0 16px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: left;
+    color: $color-corporate-blue;
+    background: $color-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      margin-top: -4px;
+      width: 16px;
+      height: 8px;
+      background: url("../images/sprites/svg/down.svg") no-repeat center;
+      background-size: cover;
+      transform: translateZ(0);
+      transition: transform 0.3s;
+      will-change: transform;
+    }
+
+    &.is-active {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: $mobile-block-offset;
+    margin-bottom: 94px;
+
+    @include tablet {
+      display: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 16px 15px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin: 0 12px;
+    border: none;
+    padding-right: 15px;
+    padding-left: 24px;
+    width: 254px;
+    height: 89px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.073);
+    background: $color-white;
+    transition: background 0.3s;
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: $color-white;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &__text {
+      margin-bottom: 0;
+      transition: color 0.3s;
+
+      @include tablet {
+        // stylelint-disable-next-line declaration-no-important
+        font-family: $font-primary !important;
+      }
+    }
+
+    @include desktop {
+      &:hover {
+        background-color: $color-corporate-blue;
+
+        .stories__button__text {
+          color: $color-corporate-yellow;
+        }
+      }
+
+      &.is-active {
+        background-color: $color-corporate-blue;
+        pointer-events: none;
+
+        .stories__button__text {
+          color: $color-corporate-yellow;
+        }
+      }
+    }
+
+    @include tablet {
+      display: block;
+      margin: 0 0 15px;
+      padding: 0;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      background: $color-white;
+
+      .stories__button__icon {
+        display: none;
+      }
+
+      .stories__button__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: left;
+        color: $color-corporate-blue;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}

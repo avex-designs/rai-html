@@ -1,0 +1,53 @@
+.sitemap {
+  h1 {
+    margin-bottom: $desktop-block-offset;
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: $mobile-block-offset;
+    }
+  }
+
+  h5 {
+    margin-bottom: $mobile-xs-block-offset;
+    color: $color-corporate-yellow;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    margin-bottom: $desktop-block-offset;
+    padding: 0;
+
+    li {
+      margin-bottom: $mobile-xs-block-offset;
+
+      a {
+        font-size: 24px;
+        line-height: 28px;
+        text-decoration: none;
+        color: $color-corporate-blue;
+
+        @include mobile {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: $mobile-block-offset;
+    }
+  }
+}

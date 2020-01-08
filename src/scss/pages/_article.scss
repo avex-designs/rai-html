@@ -1,0 +1,142 @@
+.article {
+  h1 {
+    margin-bottom: $mobile-block-offset;
+
+    @include tablet {
+      margin-top: $mobile-xs-block-offset;
+      margin-bottom: $mobile-xs-block-offset;
+    }
+
+    @include mobile {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__image-date {
+    margin-bottom: $mobile-block-offset;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    span {
+      display: block;
+      border-bottom: 1px solid $color-corporate-yellow;
+      padding: 23px 0;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: right;
+      color: rgba($color-black, 0.5);
+
+      @include mobile {
+        padding: 8px 0;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: $mobile-xs-block-offset;
+    }
+
+    @include mobile {
+      margin-bottom: $mobile-block-offset;
+    }
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    margin-top: $desktop-block-offset;
+    margin-bottom: $mobile-xs-block-offset;
+    border-bottom: 1px solid $color-corporate-yellow;
+    padding-bottom: $mobile-block-offset;
+
+    .h6-like {
+      margin: 0 5px 0 0;
+
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__items {
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0 16px;
+        opacity: 0.5;
+        transform: translateZ(0);
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    @include tablet {
+      margin-top: $mobile-block-offset;
+      margin-bottom: 16px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__another {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        background-position: center;
+        background-size: cover;
+
+        svg {
+          width: 16px;
+          height: 30px;
+        }
+      }
+
+      .h5-like {
+        margin-bottom: 0;
+        transition: color 0.3s;
+      }
+
+      &:first-child {
+        .h5-like {
+          margin-left: 16px;
+        }
+      }
+
+      &:last-child {
+        .h5-like {
+          margin-right: 16px;
+        }
+      }
+
+      @include desktop {
+        &:hover {
+          text-decoration: none;
+
+          .h5-like {
+            color: $color-bright-blue;
+          }
+        }
+      }
+    }
+  }
+}
