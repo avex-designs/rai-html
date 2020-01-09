@@ -219,6 +219,49 @@ p {
   }
 }
 
+a {
+  &.phone,
+  &.mail {
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $color-corporate-blue;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 24px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &.phone {
+    &::before {
+      height: 24px;
+      background-image: url("../images/sprites/svg/phone-yellow.svg");
+    }
+  }
+
+  &.mail {
+    &::before {
+      height: 18px;
+      background-image: url("../images/sprites/svg/mail-yellow.svg");
+    }
+  }
+}
+
 .text-headline {
   margin-top: 32px;
 

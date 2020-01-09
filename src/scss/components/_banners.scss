@@ -140,6 +140,12 @@
     }
   }
 
+  &--mid-size {
+    .content {
+      min-height: 420px;
+    }
+  }
+
   &--hero {
     overflow: hidden;
     padding-top: 160px;
