@@ -21,24 +21,22 @@
 
     &__items {
       @include mobile {
+        padding: 0;
         width: 100%;
 
         .slick-slide {
-          div {
+          > div {
             height: 100%;
           }
+        }
+
+        .slick-arrow {
+          top: 160px;
         }
       }
     }
 
-    .slick-slide,
-    .slick-list,
-    .slick-track {
-      height: 100%;
-    }
-
     &__item {
-      height: 100%;
       background-color: $color-white;
       transition: background 0.3s, left 0.3s, opacity 0.3s;
 
@@ -49,6 +47,11 @@
         padding: 20px;
         width: 100%;
         height: 100%;
+
+        @include mobile {
+          height: 320px;
+          background-color: $color-light-blue;
+        }
       }
 
       img {
@@ -56,6 +59,43 @@
         max-height: 100%;
         filter: grayscale(1);
         transition: filter 0.3s;
+
+        @include mobile {
+          filter: grayscale(0);
+        }
+      }
+
+      &__textblock {
+        padding: $mobile-block-offset $mobile-xs-block-offset;
+
+        p {
+          margin-bottom: $mobile-xs-block-offset;
+          max-width: 100%;
+          font-family: $font-secondary;
+          font-size: 14px;
+          line-height: 16px;
+          color: $color-corporate-blue;
+        }
+
+        a {
+          position: relative;
+          font-size: 14px;
+          line-height: 24px;
+          color: #172962;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-corporate-yellow;
+            transform: translateZ(0);
+            transform-origin: left center;
+            transition: transform 0.3s;
+          }
+        }
       }
 
       &.not-active {
@@ -167,6 +207,10 @@
       @include tablet {
         padding: 30px;
       }
+    }
+
+    @include mobile {
+      height: auto;
     }
 
     @include tablet-only {

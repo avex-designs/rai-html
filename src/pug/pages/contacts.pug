@@ -1,19 +1,23 @@
-.block-offset-top-and-bottom
+.block-offset-bottom
   .contacts
-    .banner.banner--mid-size.theme-light(style="background-image: url('/images/contacts-bg.jpg')")
-      .container
-        .row.content.align-items-center
-          .col-12
-            h2.h1-like.text-center Contact Us
+    .call-out.call-out--short
+      .call-out__image(style="background-image: url('/images/contacts-bg.jpg')")
+        .call-out__image__content
+          h1.h3-like.call-out__title Contact Us
     .container-lg.block-offset-top
       .row
-        .col-12.col-lg-6.order-lg-1
+        .col-12.col-lg-6
           .contacts__item
             h2.contacts__item__title.h2-like.text-center Main Office
-            p 401 N. Main St. P.O. Box 2990#[br] Winston-Salem, NC 27101-2990
+            p.offset-bottom-30 401 N. Main St. P.O. Box 2990#[br] Winston-Salem, NC 27101-2990
             div
               a.phone(href="tel:+3367412000") 336 741 2000
-        .col-12.col-lg-6.order-lg-2
+          a.contacts__card.for-desktop(href="#")
+            img(src="/images/logo.png" srcset="/images/logo@2x.png 2x")
+            .link-arrow
+              span BAT Investors Relation
+              +svg('arrow-right')
+        .col-12.col-lg-6
           .contacts__item
             h2.contacts__item__title.h2-like.text-center Media
             span.text-italic General Contact
@@ -22,14 +26,13 @@
               a.phone(href="tel:+3367417693") 336 741 7693
             div
               a.mail(href="mailto:RAIPublicAffairs@rjrt.com") RAIPublicAffairs@rjrt.com
-        .col-12.col-lg-6.order-lg-4
-          .contacts__item.contacts__item--with-border
+            .hr
             span.text-italic Professional journalists
             p Kaelan Hollon
             div
               a.phone(href="tel:+2024214921") 202 421 4921
             .contacts__item__note Please note: The contact information above is for journalists only.
-        .col-12.col-lg-6.order-lg-3
+        .col-12.for-tablet
           a.contacts__card(href="#")
             img(src="/images/logo.png" srcset="/images/logo@2x.png 2x")
             .link-arrow

@@ -2,7 +2,10 @@
   &__item {
     position: relative;
     margin-bottom: $mobile-block-offset;
-    padding: 80px 48px 0;
+    border-radius: 6px;
+    padding: 80px 48px 33px;
+    min-height: 380px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
 
     &__title {
       margin-bottom: $mobile-block-offset;
@@ -13,30 +16,36 @@
     }
 
     &__note {
-      margin-top: $mobile-block-offset;
+      margin-top: 27px;
       font-size: 14px;
       line-height: 24px;
       color: rgba($color-black, 0.5);
     }
 
     p {
-      margin-bottom: 30px;
+      margin-bottom: 13px;
       font-size: 24px;
       line-height: 28px;
       color: $color-corporate-blue;
+
+      &.offset-bottom-30 {
+        margin-bottom: 30px;
+
+        @include mobile {
+          margin-bottom: $mobile-xs-block-offset;
+        }
+      }
 
       @include tablet {
         font-size: 20px;
         line-height: 23px;
       }
-
-      @include mobile {
-        margin-bottom: $mobile-xs-block-offset;
-      }
     }
 
     .text-italic {
+      display: block;
       margin-bottom: 16px;
+      font-family: $font-primary;
       font-style: italic;
       font-size: 18px;
       line-height: 32px;
@@ -45,6 +54,13 @@
 
     a {
       margin-bottom: 14px;
+    }
+
+    .hr {
+      margin-top: 29px;
+      margin-bottom: 30px;
+      height: 1px;
+      background-color: $color-light-blue;
     }
 
     &--with-border {
@@ -75,8 +91,8 @@
     }
 
     @include tablet {
-      margin-bottom: 0;
       padding: $mobile-block-offset 48px;
+      min-height: 1px;
 
       &.contacts__item--with-border {
         padding-top: 30px;
@@ -124,8 +140,6 @@
     }
 
     @include tablet {
-      margin-top: $mobile-block-offset;
-
       .link-arrow {
         span {
           color: $color-bright-blue;

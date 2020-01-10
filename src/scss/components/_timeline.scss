@@ -75,7 +75,7 @@
         }
       }
 
-      .h6-like {
+      span {
         position: relative;
         display: block;
         margin-bottom: 0;
@@ -83,6 +83,11 @@
         transform: translateZ(0);
         transition: color 0.4s, transform 0.4s;
         will-change: transform, color;
+
+        @include mobile {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
 
       &.is-active {
