@@ -70,6 +70,10 @@
     }
   }
 
+  .ul-like {
+    margin: $mobile-block-offset 0;
+  }
+
   &.is-open {
     .information-dropdown__title {
       &::before {
