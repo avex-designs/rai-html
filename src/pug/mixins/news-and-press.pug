@@ -1,0 +1,33 @@
+mixin news-and-press(data)
+  section.article-list.block-offset-top-and-bottom
+    h2.h2-like.text-centered-and-decorated.mobile-offset-bottom!= data.title
+    .container-lg.article-list__tabs
+      .article-list__tabs-buttons.for-tablet
+        button.is-active(data-tab="news")!= data.newsTitle
+        button(data-tab="press")!= data.pressTitle
+      .row
+        .col-12.col-lg-6.article-list__tab.is-active(data-tab="news")
+          .article-list__container
+            each news in data.news
+              article.article-list__item
+                a.with-image(href=`${news.link}`)
+                  img(src=`/images/${news.image}` alt="")
+                  .article-list__item__textblock
+                    p.article-list__item__date!= news.date
+                    h3.h6-like!= news.title
+                    p!= news.text
+          .article-list__links
+            a.link-arrow(href=`${data.newsLink}`)
+              span!= data.newsLinkName
+              +svg('arrow-right')
+        .col-12.col-lg-6.article-list__tab(data-tab="press")
+          .article-list__container
+            each press in data.press
+              article.article-list__item
+                a(href="#")
+                  p.article-list__item__date!= press.date
+                  h3.h6-like!= press.text
+          .article-list__links
+            a.link-arrow(href=`${data.pressLink}`)
+              span!= data.pressLinkName
+              +svg('arrow-right')

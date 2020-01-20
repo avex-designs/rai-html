@@ -1,12 +1,13 @@
 .information-dropdown {
-  border-top: 1px solid $color-corporate-yellow;
   border-bottom: 1px solid $color-corporate-yellow;
 
   &__title {
     position: relative;
     display: flex;
     align-items: center;
+    padding-top: 10px;
     padding-right: 40px;
+    padding-bottom: 10px;
     min-height: 100px;
     cursor: pointer;
 
@@ -71,7 +72,7 @@
   }
 
   .ul-like {
-    margin: $mobile-block-offset 0;
+    margin: $mobile-xs-block-offset 0;
   }
 
   &.is-open {
@@ -82,6 +83,31 @@
 
       &::after {
         opacity: 1;
+      }
+    }
+  }
+
+  @include desktop {
+    &:first-child {
+      border-top: 1px solid $color-corporate-yellow;
+    }
+  }
+}
+
+.information-dropdowns {
+  > .col-12 {
+    &:first-child {
+      position: relative;
+
+      @include tablet {
+        &::before {
+          content: "";
+          position: absolute;
+          left: 15px;
+          right: 15px;
+          height: 1px;
+          background-color: $color-corporate-yellow;
+        }
       }
     }
   }

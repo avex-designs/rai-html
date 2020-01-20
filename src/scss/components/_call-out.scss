@@ -172,6 +172,13 @@
         text-align: center;
         color: $color-corporate-blue;
       }
+
+      &--full {
+        h2,
+        .h3-like {
+          max-width: 1280px;
+        }
+      }
     }
   }
 

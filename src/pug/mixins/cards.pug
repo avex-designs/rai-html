@@ -1,0 +1,15 @@
+mixin cards(data)
+  article.cards.block-offset-top-and-bottom
+    .container-lg
+      .row
+        each card in data
+          .col-12.col-md-4
+            section.cards__item.cards__item--with-bg-image.text-center
+              figure(style=`background-image: url('/images/${card.background}`)
+              .content
+                h3.h4-like!= card.title
+                if card.text
+                  p!= card.text
+              a.secondary-button.cta(href=`${card.link}`)
+                span!= card.title
+                +svg('arrow-right')

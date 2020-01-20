@@ -1,40 +1,43 @@
-section.article-list.block-offset-top-and-bottom
-  .container-lg.article-list__tabs
-    .article-list__tabs-buttons.for-tablet
-      button.is-active(data-tab="news") News
-      button(data-tab="press") Press
-    .row
-      .col-12.col-lg-6.article-list__tab.is-active(data-tab="news")
-        .article-list__container
-          article.article-list__item
-            a.with-image(href="#")
-              img(src="/images/article-list-1.jpg" alt="")
-              .article-list__item__textblock
-                p.article-list__item__date 2 August 2019
-                h3.h6-like Lorem ipsum dolor sit amet consectetur lorem ipsum
-                p Lorem ipsum dolor sit amet, consectetur adia is cing elit, sed do eiusmod tempor incididunt ut labore.
-          article.article-list__item
-            a.with-image(href="#")
-              img(src="/images/article-list-2.jpg" alt="")
-              .article-list__item__textblock
-                p.article-list__item__date 2 August 2019
-                h3.h6-like Lorem ipsum dolor sit amet consectetur
-                p Lorem ipsum dolor sit amet, consectetur adia is cing elit, sed do eiusmod tempor incididunt ut labore.
-      .col-12.col-lg-6.article-list__tab(data-tab="press")
-        .article-list__container
-          article.article-list__item
-            a(href="#")
-              p.article-list__item__date 2 August 2019
-              h3.h6-like Lorem ipsum dolor sit amet consectetur lorem ipsum 
-          article.article-list__item
-            a(href="#")
-              p.article-list__item__date 2 August 2019
-              h3.h6-like Lorem ipsum dolor sit amet consectetur
-          article.article-list__item
-            a(href="#")
-              p.article-list__item__date 2 August 2019
-              h3.h6-like Lorem ipsum dolor sit amet consectetur
-          article.article-list__item
-            a(href="#")
-              p.article-list__item__date 2 August 2019
-              h3.h6-like Lorem ipsum dolor sit amet consectetur
++news-and-press({
+  title: 'Latest News and Press',
+  newsTitle: 'News',
+  pressTitle: 'Press',
+  newsLink: '#',
+  newsLinkName: 'All News',
+  pressLink: '#',
+  pressLinkName: 'All Press Releases',
+  news: [
+    {
+      link: '#',
+      image: 'article-list-1.jpg',
+      date: '2 August 2019',
+      title: 'Santa Fe Natural Tobacco Company moves to captured rainwater for irrigation',
+      text: 'It takes time, energy and resources to maintain the properties and facilities that …',
+    },
+    {
+      link: '#',
+      image: 'article-list-2.jpg',
+      date: '2 August 2019',
+      title: 'Care, compassion and community commitment drive SFNTC’s Oxford employees',
+      text: 'Hundreds of North Carolinians who live in and around Granville County are leading better …',
+    },
+  ],
+  press: [
+    {
+      date: '2 August 2019',
+      text: 'Lorem ipsum dolor sit amet consectetur lorem ipsum ',
+    },
+    {
+      date: '2 August 2019',
+      text: 'Lorem ipsum dolor sit amet consectetur lorem ipsum ',
+    },
+    {
+      date: '2 August 2019',
+      text: 'Lorem ipsum dolor sit amet consectetur lorem ipsum ',
+    },
+    {
+      date: '2 August 2019',
+      text: 'Lorem ipsum dolor sit amet consectetur lorem ipsum ',
+    },
+  ],
+})

@@ -266,6 +266,10 @@
         }
       }
 
+      &.not-active {
+        pointer-events: none;
+      }
+
       @include desktop {
         &:hover {
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.164);
@@ -279,7 +283,17 @@
   }
 
   &--persons {
+    .lg-center {
+      @include desktop {
+        justify-content: center;
+      }
+    }
+
     .col-md-4 {
+      @include desktop {
+        padding-bottom: $mobile-xs-block-offset;
+      }
+
       @include tablet {
         padding: 0 13px $mobile-xs-block-offset;
       }

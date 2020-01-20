@@ -156,6 +156,11 @@
   &__textblock {
     width: calc(100% - 294px);
 
+    h5 {
+      margin-top: $mobile-block-offset;
+      margin-bottom: $mobile-xs-block-offset;
+    }
+
     @include tablet {
       width: 100%;
     }

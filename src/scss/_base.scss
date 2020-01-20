@@ -217,6 +217,10 @@ p {
       color: $color-bright-blue;
     }
   }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
 }
 
 a {
@@ -267,6 +271,38 @@ a {
 
   @include mobile {
     margin-top: 26px;
+  }
+}
+
+.text-centered-and-decorated {
+  position: relative;
+  padding-bottom: 5px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -20px;
+    width: 40px;
+    height: 1px;
+    background-color: $color-corporate-yellow;
+  }
+}
+
+.decorated {
+  position: relative;
+  padding-bottom: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 1px;
+    background-color: $color-corporate-yellow;
   }
 }
 
@@ -720,4 +756,34 @@ img {
   @include mobile {
     padding-bottom: $mobile-block-offset;
   }
+}
+
+.mobile-offset-top-and-bottom {
+  margin-top: $mobile-block-offset;
+  margin-bottom: $mobile-block-offset;
+}
+
+.mobile-offset-top {
+  margin-top: $mobile-block-offset;
+}
+
+.mobile-offset-bottom {
+  margin-bottom: $mobile-block-offset;
+}
+
+.mobile-offset-left {
+  padding-left: $mobile-block-offset;
+}
+
+.xs-offset-top-and-bottom {
+  margin-top: $mobile-xs-block-offset;
+  margin-bottom: $mobile-xs-block-offset;
+}
+
+.xs-offset-top {
+  margin-top: $mobile-xs-block-offset;
+}
+
+.xs-offset-bottom {
+  margin-bottom: $mobile-xs-block-offset;
 }
