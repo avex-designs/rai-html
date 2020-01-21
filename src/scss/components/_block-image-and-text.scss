@@ -24,6 +24,12 @@
     .cta {
       margin-top: $mobile-block-offset;
     }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .h3-like {
@@ -37,6 +43,10 @@
     margin-top: $mobile-block-offset;
 
     li {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       @include tablet-and-desktop {
         width: calc(50% - 30px);
 
@@ -48,6 +58,10 @@
           margin-left: 30px;
         }
       }
+    }
+
+    &:first-child {
+      margin-top: 0;
     }
 
     &.li-full {

@@ -758,6 +758,13 @@ img {
   }
 }
 
+.mobile-offset-top-and-bottom-desktop {
+  @include desktop {
+    margin-top: $mobile-block-offset;
+    margin-bottom: $mobile-block-offset;
+  }
+}
+
 .mobile-offset-top-and-bottom {
   margin-top: $mobile-block-offset;
   margin-bottom: $mobile-block-offset;
