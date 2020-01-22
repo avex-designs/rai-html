@@ -9,6 +9,12 @@
     }
   }
 
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__item {
     position: relative;
     display: flex;

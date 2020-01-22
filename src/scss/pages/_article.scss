@@ -12,6 +12,11 @@
     }
   }
 
+  h5,
+  .h5-like {
+    margin-top: 32px;
+  }
+
   &__image-date {
     margin-bottom: $mobile-block-offset;
 
@@ -31,6 +36,49 @@
 
       @include mobile {
         padding: 8px 0;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: $mobile-xs-block-offset;
+    }
+
+    @include mobile {
+      margin-bottom: $mobile-block-offset;
+    }
+  }
+
+  &__image-name {
+    margin-bottom: 25px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &__name {
+      display: flex;
+      align-items: center;
+      margin-top: 26px;
+
+      h5,
+      .h5-like {
+        margin-top: 0;
+        margin-right: 16px;
+        margin-bottom: 0;
+
+        @include mobile {
+          margin-bottom: 15px;
+        }
+      }
+
+      h6,
+      .h6-like {
+        margin-bottom: 0;
+      }
+
+      @include mobile {
+        display: block;
       }
     }
 
@@ -138,5 +186,11 @@
         }
       }
     }
+  }
+
+  &__content {
+    margin-bottom: $mobile-block-offset;
+    border-top: 1px solid $color-corporate-yellow;
+    border-bottom: 1px solid $color-corporate-yellow;
   }
 }
