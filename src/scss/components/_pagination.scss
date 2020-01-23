@@ -1,0 +1,77 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-black;
+
+    svg {
+      width: 5px;
+      height: 9px;
+    }
+
+    &:first-child {
+      span {
+        margin-left: 6px;
+      }
+    }
+
+    &:last-child {
+      span {
+        margin-right: 6px;
+      }
+    }
+
+    @include desktop {
+      &:hover {
+        text-decoration: none;
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 3px;
+
+      a,
+      span {
+        font-size: 16px;
+        line-height: 18px;
+        text-decoration: none;
+        color: $color-black;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+
+        @include desktop {
+          &:hover {
+            text-decoration: underline;
+            opacity: 1;
+          }
+        }
+      }
+
+      &.is-active {
+        a,
+        span {
+          text-decoration: underline;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

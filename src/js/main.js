@@ -268,3 +268,21 @@ $('.stories__button-mobile').on('click', (e) => {
   $(e.currentTarget).addClass('is-active');
   $('.stories__buttons').slideToggle(400);
 });
+
+// Library popups ///////////////////////
+
+$('.js-show-image').on('click', (e) => {
+  let $parent = $(e.currentTarget).closest('.library__item');
+  let image = $parent.data('image');
+  let link = $parent.find('a').attr('href');
+
+  let $popup = $(document).find('.image-popup');
+
+  $popup.find('img').attr('src', image);
+  $popup.find('a').attr('href', link);
+  $popup.fadeIn();
+});
+
+$('.js-image-popup__close').on('click', (e) => {
+  $(e.currentTarget).closest('.image-popup').fadeOut();
+});

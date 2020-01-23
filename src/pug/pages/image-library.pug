@@ -1,0 +1,58 @@
+.call-out.call-out--long
+  .call-out__image(style="background-image: url('/images/image-library/banner.jpg')")
+    .call-out__image__content
+      h1.h3-like.call-out__title Resources
+  .call-out__list-container.js-dropdown
+    button.call-out__mobile-list.js-dropdown-button.for-tablet Resources
+    ul.call-out__list.js-dropdown-content
+      li
+        a(href="/news-and-features.html") News and Features
+      li
+        a(href="/press-releases.html") Press Releases
+      li.is-active
+        a(href="/resources.html") Useful Resources
+
+h2.h2-like.text-center.block-offset-top.mobile-offset-bottom Image Library
+
+article.library
+  .container-lg
+    ul.row
+      li.col-12.col-md-6.col-lg-4
+        .library__item(data-image="/images/image-library/popup.jpg")
+          a(href="/images/image-library/image-1@2x.jpg" download)
+            +svg('download')
+          .library__item__image.js-show-image(style="background-image: url('/images/image-library/image-1.jpg')")
+          h5.h5-like.js-show-image Plaza-WinstonSalem-1.jpg
+      li.col-12.col-md-6.col-lg-4
+        .library__item(data-image="/images/image-library/popup.jpg")
+          a(href="/images/image-library/image-2@2x.jpg" download)
+            +svg('download')
+          .library__item__image.js-show-image(style="background-image: url('/images/image-library/image-2.jpg')")
+          h5.h5-like.js-show-image Plaza-WinstonSalem-2.jpg
+      li.col-12.col-md-6.col-lg-4
+        .library__item(data-image="/images/image-library/popup.jpg")
+          a(href="/images/image-library/image-3@2x.jpg" download)
+            +svg('download')
+          .library__item__image.js-show-image(style="background-image: url('/images/image-library/image-3.jpg')")
+          h5.h5-like.js-show-image Plaza-WinstonSalem-3.jpg
+      li.col-12.col-md-6.col-lg-4
+        .library__item(data-image="/images/image-library/popup.jpg")
+          a(href="/images/image-library/image-4@2x.jpg" download)
+            +svg('download')
+          .library__item__image.js-show-image(style="background-image: url('/images/image-library/image-4.jpg')")
+          h5.h5-like.js-show-image Plaza-WinstonSalem-4.jpg
+      li.col-12.col-md-6.col-lg-4
+        .library__item(data-image="/images/image-library/popup.jpg")
+          a(href="/images/image-library/image-5@2x.jpg" download)
+            +svg('download')
+          .library__item__image.js-show-image(style="background-image: url('/images/image-library/image-5.jpg')")
+          h5.h5-like.js-show-image Plaza-WinstonSalem-5.jpg
+
+.image-popup
+  .image-popup__bg
+  button.image-popup__close.js-image-popup__close
+    +svg('close')
+  .image-popup__content
+    img(src="/images/image-library/popup.jpg")
+    a(href="/images/image-library/popup.jpg" download)
+      +svg('download')
