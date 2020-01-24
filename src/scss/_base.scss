@@ -335,6 +335,12 @@ img {
       background-color: $color-black;
     }
   }
+
+  &.li-thin {
+    li {
+      font-weight: 400;
+    }
+  }
 }
 
 .link-arrow {

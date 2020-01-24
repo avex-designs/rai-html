@@ -98,6 +98,37 @@
     margin-left: 40px;
     max-width: 550px;
 
+    &.two-lists {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .ul-like {
+        margin-top: 0;
+        width: calc(50% - 15px);
+
+        li {
+          width: 100%;
+        }
+
+        @include mobile {
+          width: 100%;
+
+          &:first-child {
+            li {
+              &:last-child {
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      @include mobile {
+        display: block;
+      }
+    }
+
     @include tablet {
       max-width: 100%;
     }
