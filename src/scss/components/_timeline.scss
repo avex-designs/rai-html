@@ -215,6 +215,10 @@
           }
         }
 
+        @include desktop {
+          padding: $mobile-xs-block-offset 0;
+        }
+
         @include tablet {
           order: 3;
           width: 100%;

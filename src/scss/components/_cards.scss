@@ -314,6 +314,27 @@
       margin-bottom: 0;
       padding: 0;
     }
+
+    &.vertical-images {
+      figure {
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: auto;
+          height: auto;
+          min-width: 140px;
+          min-height: 140px;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
   }
 
   @include mobile {
