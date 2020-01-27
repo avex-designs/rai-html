@@ -286,3 +286,31 @@ $('.js-show-image').on('click', (e) => {
 $('.js-image-popup__close').on('click', (e) => {
   $(e.currentTarget).closest('.image-popup').fadeOut();
 });
+
+// Press Releases ///////////////////////
+
+$('.article-list__years li a').on('click', (e) => {
+  let year = $(e.currentTarget).data('year');
+
+  $('.article-list__years li').removeClass('is-active');
+  $(e.currentTarget).parent().addClass('is-active');
+
+  if (year !== 'all') {
+    $('.article-list__years-container').find('.article-list__item').hide();
+    $('.article-list__years-container').find(`.article-list__item[data-year="${year}"]`).show();
+  } else {
+    $('.article-list__years-container').find('.article-list__item').show();
+  }
+});
+
+// PScroll To Block ///////////////////////
+
+$('[data-scroll-link]').on('click', (e) => {
+  let link = $(e.currentTarget).data('scroll-link');
+  let $block = $(document).find(`[data-scroll-block="${link}"]`);
+  let offsetTop = $block.offset().top;
+
+  $(document.documentElement).add(document.body).animate({
+    scrollTop: offsetTop,
+  }, 400);
+});

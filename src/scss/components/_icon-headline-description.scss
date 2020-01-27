@@ -27,6 +27,11 @@
       margin-top: $mobile-xs-block-offset;
       transition: opacity 0.3s;
 
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
       @include desktop {
         opacity: 0;
       }

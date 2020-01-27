@@ -61,14 +61,14 @@ article.block-image-and-text.block-offset-bottom
             img(src="/images/community-engagement/icon-2.svg" alt="")
           h3.h5-like Corporate giving
           p RAI Group makes monetary contributions and non-cash donations, such as land and buildings, to support nonprofits and economic development efforts in the communities in which we live and operate.
-          //- a.button(href="#") View Stories
+          a.button(href="javascript:void(0)" data-scroll-link="corporate-giving") View Stories
       .icon-headline-description__item
         .icon-headline-description__item__content
           .icon-headline-description__item__image
             img(src="/images/community-engagement/icon-3.svg" alt="")
           h3.h5-like Employee Giving
           p Employees are able to direct foundation and corporate funds in a variety of ways. For example, the Reynolds American Foundation matches employee gifts to nonprofit organizations and institutions of higher learning up to $7,000 per employee per year.
-          //- a.button(href="#") View Stories
+          a.button(href="javascript:void(0)" data-scroll-link="employee-giving") View Stories
 
 .container-lg.block-offset-top-and-bottom
   .row.information-dropdowns
@@ -107,7 +107,7 @@ article.block-image-and-text.block-offset-bottom
 
 //- h2.h2-like.text-center.mobile-offset-bottom Feature Stories
 
-article.article-feature.container-lg.mobile-offset-bottom
+article.article-feature.container-lg.mobile-offset-bottom(data-scroll-block="employee-giving")
   .article-feature__bg(style="background-color: #f9fcfe")
     .row.align-items-center
       .article-feature__textblock.col-12.col-md-6
@@ -125,7 +125,7 @@ article.article-feature.container-lg.mobile-offset-bottom
       .article-feature__imageblock.col-12.col-md-6
         img(src="/images/community-engagement/image-3.jpg" srcset="/images/community-engagement/image-3@2x.jpg 2x" alt="")
 
-article.article-feature.container-lg.mobile-offset-bottom
+article.article-feature.container-lg.mobile-offset-bottom(data-scroll-block="corporate-giving")
   .article-feature__bg(style="background-color: #f9fcfe")
     .row.align-items-center
       .article-feature__textblock.col-12.col-md-6

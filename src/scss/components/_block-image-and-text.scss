@@ -6,6 +6,10 @@
       width: 100%;
       max-width: 100%;
 
+      @include desktop {
+        max-height: 360px;
+      }
+
       @include tablet {
         margin-bottom: $mobile-block-offset;
       }

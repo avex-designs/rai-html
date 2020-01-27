@@ -220,6 +220,7 @@
         &.is-active {
           a {
             color: $color-corporate-blue;
+            pointer-events: none;
           }
         }
 
