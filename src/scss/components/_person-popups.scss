@@ -161,6 +161,10 @@
       margin-bottom: $mobile-xs-block-offset;
     }
 
+    &--full {
+      width: 100%;
+    }
+
     @include tablet {
       width: 100%;
     }
