@@ -24,7 +24,7 @@ mixin news-and-press(data)
           .article-list__container
             each press in data.press
               article.article-list__item
-                a(href="#")
+                a(href=`${press.link}` target="_blank")
                   p.article-list__item__date!= press.date
                   h3.h6-like!= press.text
           .article-list__links
