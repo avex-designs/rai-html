@@ -800,3 +800,26 @@ img {
 .xs-offset-bottom {
   margin-bottom: $mobile-xs-block-offset;
 }
+
+.table-container {
+  @include mobile {
+    overflow-x: auto;
+  }
+}
+
+.table {
+  border-top: 1px solid $color-corporate-blue;
+  border-right: 1px solid $color-corporate-blue;
+
+  .col-6 {
+    border-bottom: 1px solid $color-corporate-blue;
+    border-left: 1px solid $color-corporate-blue;
+    padding: 15px;
+  }
+
+  @include mobile {
+    margin: 0;
+    width: 600px;
+    min-width: 100%;
+  }
+}

@@ -154,26 +154,35 @@
       align-items: center;
 
       &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         order: 1;
-        overflow-x: hidden;
+        overflow: hidden;
         border-radius: $primary-border-radius;
         width: calc(50% - 80px);
+        height: 350px;
 
         img {
           display: block;
-          width: 100%;
-          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+
+          @include mobile {
+            width: 100%;
+            height: auto;
+          }
         }
 
         @include tablet {
           order: 2;
           margin-bottom: $mobile-xs-block-offset;
           width: 100%;
-          max-width: 520px;
         }
 
         @include mobile {
           margin-bottom: 16px;
+          height: auto;
         }
       }
 
