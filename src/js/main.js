@@ -193,7 +193,7 @@ $('.awwards__item').on('mouseover', (e) => {
 
     $('.awwards__item').not($this).addClass('not-active');
     $('.awwards__textblock p').text($this.find('.awwards__item__textblock p').text());
-    $('.awwards__textblock a').attr('href', $this.data('link')).text($this.find('.awwards__item__textblock a').text());
+    $('.awwards__textblock a').attr('href', $this.find('.awwards__item__textblock a').attr('href')).text($this.find('.awwards__item__textblock a').text());
 
     setTimeout(() => {
       $this.addClass('is-active');
