@@ -20,6 +20,7 @@
   &__imageblock {
     img {
       display: block;
+      border-radius: $primary-border-radius;
       width: 100%;
       height: auto;
     }
