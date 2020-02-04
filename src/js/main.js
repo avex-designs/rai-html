@@ -1,4 +1,5 @@
 import './vendor';
+import './stock-prices';
 
 // Dropdown ///////////////////////
 
