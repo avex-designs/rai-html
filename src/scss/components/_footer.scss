@@ -283,6 +283,11 @@
     }
   }
 
+  // #twitter-wjs {
+  //   overflow-y: auto;
+  //   max-height: 246px;
+  // }
+
   @include desktop {
     border-top: 1px solid #e9ecee;
     padding-top: $tablet-block-offset;

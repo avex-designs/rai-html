@@ -8,22 +8,28 @@
       li
         a(href="/news-and-features.html") News and Features
       li
-        a(href="/press-releases.html") Press Releases
+        a(href="/press-releases.html") News Releases
       li.is-active
         a(href="/resources.html") Useful Resources
 
-article.cards.cards--persons.block-offset-top-and-bottom
+article.cards.cards--persons.cards--resources.block-offset-top-and-bottom
   .container-lg
     ul.row.justify-content-center
       //- li.col-6.col-md-4.col-lg-3
         a(href="/image-library.html")
-          section.cards__item.cards__item--person.text-center.js-open-popup(itemscope itemtype="http://schema.org/Person" data-popup="1")
+          section.cards__item.cards__item--person.text-center.js-open-popup(itemscope itemtype="http://schema.org/Person")
             figure
               img(src="/images/resources/videos.jpg" itemprop="image" alt="")
             h3.h5-like Videos
       li.col-6.col-md-4.col-lg-3
         a(href="/image-library.html")
-          section.cards__item.cards__item--person.text-center.js-open-popup(itemscope itemtype="http://schema.org/Person" data-popup="1")
+          section.cards__item.cards__item--person.text-center(itemscope itemtype="http://schema.org/Person")
             figure
               img(src="/images/resources/images.jpg" itemprop="image" alt="")
-            h3.h5-like Image Library
+            h3.h5-like Image Librar
+      li.col-6.col-md-4.col-lg-3
+        a(href="/contacts.html")
+          section.cards__item.cards__item--person.text-center.without-image(itemscope itemtype="http://schema.org/Person")
+            figure
+              //- img(src="/images/resources/images.jpg" itemprop="image" alt="")
+            h3.h5-like Contacts Us

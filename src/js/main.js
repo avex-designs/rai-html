@@ -288,7 +288,7 @@ $('.js-image-popup__close').on('click', (e) => {
   $(e.currentTarget).closest('.image-popup').fadeOut();
 });
 
-// Press Releases ///////////////////////
+// News Releases ///////////////////////
 
 $('.article-list__years li a').on('click', (e) => {
   let year = $(e.currentTarget).data('year');
@@ -314,4 +314,30 @@ $('[data-scroll-link]').on('click', (e) => {
   $(document.documentElement).add(document.body).animate({
     scrollTop: offsetTop,
   }, 400);
+});
+
+// Twitter News ///////////////////////
+
+$(document).ready(() => {
+  let twitterStarted = false;
+
+  function getTwitter() {
+    if (window.twttr !== undefined && !twitterStarted) {
+      window.twttr.widgets.createTimeline(
+        {
+          sourceType: 'profile',
+          screenName: 'RAI_News',
+        },
+        document.getElementById('twitter-wjs'),
+        {
+          height: 240,
+          chrome: 'nofooter noheader',
+        }
+      );
+
+      twitterStarted = true;
+    }
+  }
+
+  window.requestAnimationFrame(getTwitter);
 });

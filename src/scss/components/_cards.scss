@@ -337,6 +337,38 @@
     }
   }
 
+  &--resources {
+    .without-image {
+      figure {
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background-color: $color-white;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+          background-color: $color-white;
+        }
+
+        @include tablet {
+          width: 96px;
+          height: 96px;
+        }
+
+        @include mobile {
+          width: 77px;
+          height: 77px;
+        }
+      }
+    }
+  }
+
   @include mobile {
     &--persons {
       padding-right: 10px;
