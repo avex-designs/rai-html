@@ -318,26 +318,14 @@ $('[data-scroll-link]').on('click', (e) => {
 
 // Twitter News ///////////////////////
 
-$(document).ready(() => {
-  let twitterStarted = false;
-
-  function getTwitter() {
-    if (window.twttr !== undefined && !twitterStarted) {
-      window.twttr.widgets.createTimeline(
-        {
-          sourceType: 'profile',
-          screenName: 'RAI_News',
-        },
-        document.getElementById('twitter-wjs'),
-        {
-          height: 240,
-          chrome: 'nofooter noheader',
-        }
-      );
-
-      twitterStarted = true;
-    }
+window.twttr.widgets.createTimeline(
+  {
+    sourceType: 'profile',
+    screenName: 'RAI_News',
+  },
+  document.getElementById('twitter-wjs'),
+  {
+    height: 240,
+    chrome: 'nofooter noheader',
   }
-
-  window.requestAnimationFrame(getTwitter);
-});
+);
