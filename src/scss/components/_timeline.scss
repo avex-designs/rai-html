@@ -130,6 +130,11 @@
   &__item {
     position: relative;
     display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateZ(0);
+    transition: visibility 0.4s, opacity 0.4s;
+    will-change: transform;
 
     &::before {
       content: "";
@@ -260,6 +265,18 @@
 
     &.is-active {
       display: block;
+      // stylelint-disable-next-line declaration-no-important
+      opacity: 1 !important;
+      // stylelint-disable-next-line declaration-no-important
+      visibility: visible !important;
+      transition: visibility 0.4s, opacity 0.4s;
+    }
+
+    &.is-opacity-0 {
+      // stylelint-disable-next-line declaration-no-important
+      opacity: 0 !important;
+      // stylelint-disable-next-line declaration-no-important
+      visibility: hidden !important;
     }
   }
 }

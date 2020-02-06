@@ -178,12 +178,17 @@ $('.js-timeline-year').on('click', (e) => {
 
   $('.js-timeline-year').removeClass('is-active');
   $this.addClass('is-active');
-  $pastContent.fadeOut(() => {
-    $pastContent.removeClass('is-active');
-    $currentContent.fadeIn(() => {
-      $currentContent.addClass('is-active');
-    });
-  });
+  $pastContent.addClass('is-opacity-0');
+  $currentContent.addClass('is-opacity-0');
+
+  setTimeout(() => {
+    $pastContent.removeClass('is-active is-opacity-0');
+    $currentContent.addClass('is-active');
+
+    setTimeout(() => {
+      $currentContent.removeClass('is-opacity-0');
+    }, 10);
+  }, 400);
 });
 
 // Awwards hover to show info ///////////////////////
