@@ -1,11 +1,16 @@
 extends pug/base
 
 append vars
-	//- ...
+  - link.appleTouchIcon180x180 = '/apple-touch-icon.png'
+  - link.icon32x32 = '/favicon-32x32.png'
+  - link.icon16x16 = '/favicon-16x16.png'
+  - link.manifest = '/site.webmanifest'
+  - meta.msapplicationTileColor = '#da532c'
+  - meta.themeColor = '#ffffff'
 
 block content
-	.site-container
-		include ./pug/components/header
-		include ./pug/pages/ethics-and-compliance
-		include ./pug/components/to-top
-		include ./pug/components/footer
+  .site-container
+    include ./pug/components/header
+    include ./pug/pages/ethics-and-compliance
+    include ./pug/components/to-top
+    include ./pug/components/footer
